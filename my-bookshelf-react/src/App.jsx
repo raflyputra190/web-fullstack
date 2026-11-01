@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import FormTambah from "./components/FormTambah";
 import DaftarBuku from "./components/DaftarBuku";
 import Ringkasan from "./components/Ringkasan";
+import RekomendasiBuku from "./components/RekomendasiBuku";
 
 export default function App() {
   // State utama untuk menyimpan array daftar buku
@@ -20,7 +21,8 @@ export default function App() {
         <div className="row">
           <div className="col-md-4">
             <FormTambah onAddBuku={handleAddBuku} />
-            <Ringkasan totalBuku={listBuku.length} />
+            <Ringkasan totalBuku={listBuku.length}/>
+            <RekomendasiBuku/>
           </div>
           <div className="col-md-8">
             <DaftarBuku listBuku={listBuku} />
