@@ -1,6 +1,6 @@
 import CardBuku from "./CardBuku";
 
-export default function DaftarBuku({ listBuku }) {
+export default function DaftarBuku({ listBuku, onToggleStatus }) { 
   return (
     <div className="mb-4">
       <h4 className="mb-3 border-bottom pb-2">Daftar Bacaan</h4>
@@ -10,7 +10,11 @@ export default function DaftarBuku({ listBuku }) {
         </div>
       ) : (
         listBuku.map((buku) => (
-          <CardBuku key={buku.id} buku={buku} />
+          <CardBuku 
+            key={buku.id} 
+            buku={buku} 
+            onToggleStatus={onToggleStatus} 
+          />
         ))
       )}
     </div>
